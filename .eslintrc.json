@@ -61,7 +61,16 @@
       },
       "alias": {
         "map": [
-          ["@style", "./src/style"]
+          ["@types", "./src/types"],
+          ["@components", "./src/components"],
+          ["@pages", "./src/pages"],
+          ["@style", "./src/style"],
+          ["@api", "./src/api"],
+          ["@constants", "./src/constants"],
+          ["@image", "./src/image"],
+          ["@icon", "./src/assets/icon"],
+          ["@store", "./src/store"],
+          ["@hooks", "./src/hooks"]
         ],
         "extensions": [".ts", ".tsx", ".js", ".jsx", ".scss"]
       }
