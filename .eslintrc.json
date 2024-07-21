@@ -61,7 +61,7 @@
       },
       "alias": {
         "map": [
-          ["@types", "./src/types"],
+          ["@type", "./src/type"],
           ["@components", "./src/components"],
           ["@pages", "./src/pages"],
           ["@style", "./src/style"],

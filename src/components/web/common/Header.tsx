@@ -4,7 +4,7 @@ import IconSearch from '@icon/icon-search.svg';
 
 const Header = () => {
   return (
-    <header className="header">
+    <header>
       <div className="headerContainer__titleContainer">
         <img src={IconLogo} alt="project logo" />
         <p>Compilation Of Data</p>
