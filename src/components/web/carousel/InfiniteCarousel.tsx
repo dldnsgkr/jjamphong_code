@@ -1,134 +1,22 @@
-import TestImage from '../../../assets/test/home__carousel_test-image.avif';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-
 import '@style/web/components/carousel/infiniteCarousel.scss';
 
-const InfiniteCarousel = () => {
-  const data = [
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablabl ablablablablablablablablablab lablablablablabl ablablablablab lablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-    {
-      url: TestImage,
-      title: '제목',
-      writer: '글쓴이',
-      introduceText:
-        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
-    },
-  ];
+type InfiniteCarouselPropstype = {
+  carouselData: {
+    url: string;
+    title: string;
+    writer: string;
+    introduceText: string;
+  }[];
+};
+
+const InfiniteCarousel = ({
+  carouselData,
+}: InfiniteCarouselPropstype) => {
   return (
     <>
       <Swiper
@@ -141,10 +29,10 @@ const InfiniteCarousel = () => {
         modules={[FreeMode, Pagination]}
         className="mySwiper"
       >
-        {data.map((value, key) => (
+        {carouselData.map((value, key) => (
           <SwiperSlide key={key}>
             <div className="blog-wrap">
-              <img src={TestImage} alt="testimage" />
+              <img src={value.url} alt="testimage" />
               <div className="blog-wrap__text-container">
                 <span>{value.writer}</span>
                 <p>{value.title}</p>
