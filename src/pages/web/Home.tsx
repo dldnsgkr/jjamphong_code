@@ -9,7 +9,7 @@ const Home = () => {
       title: '제목',
       writer: '글쓴이',
       introduceText:
-        'blablablablablabl ablablablablablablablablablab lablablablablabl ablablablablab lablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+        'blablablablablabl ablablablablablablablablablab lablablablablabl ablablablablab lablablablablablablablablablablablablablablablablablablablablablablablablab lablablablablablaasdfsdffs asfsfafasfdfsdfsfsfa sdfsadfdafdfsaffdfafsdf afsadfsdafasffdafsad',
     },
     {
       url: TestImage,
