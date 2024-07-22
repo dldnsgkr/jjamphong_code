@@ -8,6 +8,127 @@ import 'swiper/css/pagination';
 import '@style/web/components/carousel/infiniteCarousel.scss';
 
 const InfiniteCarousel = () => {
+  const data = [
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablabl ablablablablablablablablablab lablablablablabl ablablablablab lablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+    {
+      url: TestImage,
+      title: '제목',
+      writer: '글쓴이',
+      introduceText:
+        'blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla',
+    },
+  ];
   return (
     <>
       <Swiper
@@ -20,23 +141,18 @@ const InfiniteCarousel = () => {
         modules={[FreeMode, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="blog-wrap">
-            <img src={TestImage} alt="testimage" />
-            <div className="blog-wrap__text-container">
-              <p>제목</p>
-              <span>글쓴이?</span>
+        {data.map((value, key) => (
+          <SwiperSlide key={key}>
+            <div className="blog-wrap">
+              <img src={TestImage} alt="testimage" />
+              <div className="blog-wrap__text-container">
+                <span>{value.writer}</span>
+                <p>{value.title}</p>
+                <p>{value.introduceText}</p>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
