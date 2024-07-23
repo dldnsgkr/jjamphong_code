@@ -30,7 +30,14 @@ const InfiniteCarousel = ({
         className="mySwiper"
       >
         {carouselData.map((value, key) => (
-          <SwiperSlide key={key} style={{ height: '100%' }}>
+          <SwiperSlide
+            key={key}
+            style={{
+              height: '100%',
+              width: '25rem',
+              marginRight: '0px',
+            }}
+          >
             <div className="blog-wrap">
               <img src={value.url} alt="testimage" />
               <div className="blog-wrap__text-container">
@@ -43,6 +50,7 @@ const InfiniteCarousel = ({
                 <p className="blog-wrap__text-container--introduceText">
                   {value.introduceText}
                 </p>
+                <div className="border__gray" />
               </div>
             </div>
           </SwiperSlide>

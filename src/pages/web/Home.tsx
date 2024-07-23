@@ -127,6 +127,7 @@ const Home = () => {
   return (
     <main>
       <section>
+        <h1>인기 블로그 TOP 10</h1>
         <InfiniteCarousel carouselData={carouselData} />
       </section>
     </main>
