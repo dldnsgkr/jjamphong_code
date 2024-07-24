@@ -22,7 +22,23 @@ const Header = () => {
         </div>
       </header>
       <nav>
-        <div></div>
+        <ul>
+          <li>
+            <a href="asd">Home</a>
+          </li>
+          <li>
+            <a href="as">About</a>
+          </li>
+          <li>
+            <a href="asd">Gallery</a>
+          </li>
+          <li>
+            <a href="s">Notes</a>
+          </li>
+          <li>
+            <a href="s">Contact</a>
+          </li>
+        </ul>
       </nav>
     </>
   );
