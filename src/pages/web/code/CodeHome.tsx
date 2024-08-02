@@ -1,9 +1,12 @@
-import { routerList } from '@constants/router/mainRoutingPath';
+import CodeFooter from '@components/web/footer/CodeFooter';
+import CodeHeader from '@components/web/header/CodeHeader';
 import { Route, Routes } from 'react-router-dom';
+import { routerList } from '@constants/router/codeRoutingPath';
 
-function App() {
+const CodeHome = () => {
   return (
     <>
+      <CodeHeader />
       <Routes>
         {Object.entries(routerList).map(([key, value]) => (
           <Route
@@ -13,8 +16,9 @@ function App() {
           ></Route>
         ))}
       </Routes>
+      <CodeFooter />
     </>
   );
-}
+};
 
-export default App;
+export default CodeHome;

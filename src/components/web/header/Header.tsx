@@ -1,11 +1,11 @@
-import '@style/web/components/header/header.scss';
+import '@style/web/components/header/mainHeader.scss';
 import IconLogo from '@icon/logo/icon-logo.svg';
 // import IconSearch from '@icon/icon-search.svg';
 
 const Header = () => {
   return (
     <>
-      <header>
+      <header className="Mainheader">
         <div className="headerContainer">
           <div className="headerContainer__titleContainer">
             <img src={IconLogo} alt="project logo" />
