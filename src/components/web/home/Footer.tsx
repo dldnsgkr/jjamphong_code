@@ -1,4 +1,4 @@
-import '@style/web/components/footer/mainFooter.scss';
+import '@style/components/web/home/mainFooter.scss';
 
 const Footer = () => {
   return (

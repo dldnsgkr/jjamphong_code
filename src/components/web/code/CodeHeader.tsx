@@ -1,4 +1,4 @@
-import '@style/web/components/header/codeHeader.scss';
+import '@style/components/web/code/codeHeader.scss';
 
 const CodeHeader = () => {
   return (

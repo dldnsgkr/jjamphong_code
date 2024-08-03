@@ -1,5 +1,5 @@
-import CodeFooter from '@components/web/footer/CodeFooter';
-import CodeHeader from '@components/web/header/CodeHeader';
+import CodeFooter from '@components/web/code/CodeFooter';
+import CodeHeader from '@components/web/code/CodeHeader';
 import { Route, Routes } from 'react-router-dom';
 import { routerList } from '@constants/router/codeRoutingPath';
 

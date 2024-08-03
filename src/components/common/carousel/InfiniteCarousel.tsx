@@ -3,7 +3,7 @@ import { FreeMode, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import '@style/web/components/carousel/infiniteCarousel.scss';
+import '@style/web/components/common/carousel/infiniteCarousel.scss';
 
 type InfiniteCarouselPropstype = {
   carouselData: {

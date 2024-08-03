@@ -1,9 +1,9 @@
 // import InfiniteCarousel from '@components/web/carousel/InfiniteCarousel';
 // import TestImage from '../../assets/test/home__carousel_test-image.avif';
 // import BannerImage from '../../assets/image/demo/main-banner.jpg';
-import Footer from '@components/web/footer/Footer';
-import Header from '@components/web/header/Header';
-import '@style/web/pages/web/home/home.scss';
+import Footer from '@components/web/home/Footer';
+import Header from '@components/web/home/Header';
+import '@style/pages/web/home/home.scss';
 
 const Home = () => {
   // const carouselData = [

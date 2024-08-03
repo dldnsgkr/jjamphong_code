@@ -1,4 +1,4 @@
-import '@style/web/components/header/mainHeader.scss';
+import '@style/components/web/home/mainHeader.scss';
 import IconLogo from '@icon/logo/icon-logo.svg';
 // import IconSearch from '@icon/icon-search.svg';
 

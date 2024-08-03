@@ -1,0 +1,17 @@
+.codeDisplay__container {
+    display: flex;
+    flex-direction: column;
+    background-color: #2b2b2b;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    .codeDisplay__header {
+        display: flex;
+        height: 2rem;
+    }
+    .codeDisplay__body {
+        width: 100%;
+        pre {
+            margin: 0 !important;
+        }
+    }
+}
