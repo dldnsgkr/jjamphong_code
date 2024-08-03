@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+.codeHeader {
+    width: 100%;
+    height: 10rem;
+        .codeHeader__container {
+            padding: 1rem 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .logo {
+                font-family: 'Roboto', sans-serif;
+                font-size: 2.5rem;
+                color: #3498db;
+                font-weight: 900;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .navBar {
+                ul {
+                    position: relative;
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    text-align: center;
+                    height: 5rem;
+                    li {
+                        display: flex;
+                        flex: 1 1 0px;
+                        p {
+                            color: black;
+                            cursor: pointer;
+                            font-family: Lato;
+                            font-size: 17pt;
+                            font-weight: 400;
+                            padding: 15px 25px;
+                            position: relative;
+                            display: block;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            &:after {
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                width: 100%;
+                                height: 3px;
+                                background: #3498db;
+                                content: '';
+                                opacity: 0;
+                                -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+                                -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+                                transition: opacity 0.3s, transform 0.3s;
+                                -webkit-transform: translateY(10px);
+                                -moz-transform: translateY(10px);
+                                transform: translateY(10px);
+                              }
+                  
+                              &:hover:after, &:focus:after {
+                                opacity: 1;
+                                -webkit-transform: translateY(0px);
+                                -moz-transform: translateY(0px);
+                                transform: translateY(0px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+}

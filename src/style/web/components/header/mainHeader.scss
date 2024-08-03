@@ -14,7 +14,7 @@
             justify-content: center;
             gap: 20px;
             width: 20rem;
-            p {
+            .logo {
                 font-size: 1.5rem;
             }
         }
@@ -64,7 +64,7 @@
     }
 }
 
-nav {
+.mainNav {
     width: 100%;
     ul {
         display: flex;

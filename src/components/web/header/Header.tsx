@@ -9,7 +9,7 @@ const Header = () => {
         <div className="headerContainer">
           <div className="headerContainer__titleContainer">
             <img src={IconLogo} alt="project logo" />
-            <p>Compilation Of Data</p>
+            <p className="logo">Compilation Of Data</p>
           </div>
           {/* <div className="headerContainer__searchContainer">
           <div className="searchInput__wrapper">
@@ -23,7 +23,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <nav>
+      <nav className="mainNav">
         <ul>
           <li>
             <a href="/code">CODE</a>
