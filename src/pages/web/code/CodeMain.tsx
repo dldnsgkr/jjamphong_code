@@ -1,5 +1,7 @@
+import CodeEditor from '@components/web/code/input/CodeEditor';
 import CodeDisplay from '@components/web/code/view/CodeDisplay';
 import '@style/pages/web/code/codeMain.scss';
+import { useState } from 'react';
 
 const CodeMain = () => {
   const exampleCode = `
@@ -15,6 +17,14 @@ const CodeMain = () => {
     
     export default Home;
   `;
+  const [code, setCode] = useState(
+    '// write your code here'
+  );
+
+  const handleCodeChange = (newCode: string) => {
+    setCode(newCode);
+  };
+  console.log(code);
   return (
     <main>
       <section className="code__introduce">
@@ -37,7 +47,12 @@ const CodeMain = () => {
               <span>Go to Write</span>
             </button>
           </div>
-          <div></div>
+          <CodeEditor
+            code={code}
+            height={'15rem'}
+            language={'javascript'}
+            onChange={handleCodeChange}
+          />
         </div>
       </section>
     </main>
