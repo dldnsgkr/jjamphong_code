@@ -3,12 +3,16 @@ import 'ace-builds/src-noconflict/theme-monokai'; // 원하는 테마를 선택�
 import 'ace-builds/src-noconflict/mode-jsx';
 import 'ace-builds/src-noconflict/mode-javascript';
 import 'ace-builds/src-noconflict/mode-java';
+import 'ace-builds/src-noconflict/mode-tsx';
+import 'ace-builds/src-noconflict/mode-typescript';
+import 'ace-builds/src-noconflict/mode-css';
+import 'ace-builds/src-noconflict/mode-scss';
 
 type CodeEditorPropsType = {
-  code: string;
+  code?: string;
   height: string;
   language: string;
-  onChange: (newCode: string) => void;
+  onChange?: (newCode: string) => void;
 };
 
 const CodeEditor = ({
@@ -17,9 +21,10 @@ const CodeEditor = ({
   language,
   onChange,
 }: CodeEditorPropsType) => {
+  console.log(language);
   return (
     <AceEditor
-      mode={language}
+      mode={language.endsWith('.') ? 'text' : language}
       theme="monokai" // 원하는 테마를 설정하세요
       name="code_editor"
       value={code}

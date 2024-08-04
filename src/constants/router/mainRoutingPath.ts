@@ -9,11 +9,11 @@ export const routerList: RoutingTypes = {
     component: Home,
   },
   CODEHOME: {
-    path: '/code',
+    path: '/code/*',
     component: CodeHome,
   },
   BLOGHOME: {
-    path: '/blog',
+    path: '/blog/*',
     component: BlogHome,
   },
 };

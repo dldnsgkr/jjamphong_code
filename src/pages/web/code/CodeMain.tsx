@@ -1,30 +1,21 @@
 import CodeEditor from '@components/web/code/input/CodeEditor';
 import CodeDisplay from '@components/web/code/view/CodeDisplay';
+import { useNavigate } from 'react-router-dom';
 import '@style/pages/web/code/codeMain.scss';
-import { useState } from 'react';
 
 const CodeMain = () => {
-  const exampleCode = `
-    import React from 'react';
-    
-    const Home = () => {
-      return (
-        <>
-          <div className="home">Hello Home</div>
-        </>
-      );
-    };
-    
-    export default Home;
-  `;
-  const [code, setCode] = useState(
-    '// write your code here'
-  );
+  const navigate = useNavigate();
+  const exampleCode = `import React from 'react';
 
-  const handleCodeChange = (newCode: string) => {
-    setCode(newCode);
-  };
-  console.log(code);
+const Home = () => {
+  return (
+    <>
+      <div className="home">Hello Home</div>
+    </>
+  );
+};
+
+export default Home;`;
   return (
     <main>
       <section className="code__introduce">
@@ -42,16 +33,20 @@ const CodeMain = () => {
               Enter the code you want to register and share
               it with everyone!
             </p>
-            <button className="move__to--write">
+            <button
+              className="move__to--write"
+              onClick={() => {
+                navigate('/code/postEdite');
+              }}
+            >
               <span>Click!</span>
               <span>Go to Write</span>
             </button>
           </div>
           <CodeEditor
-            code={code}
             height={'15rem'}
             language={'javascript'}
-            onChange={handleCodeChange}
+            code={exampleCode}
           />
         </div>
       </section>

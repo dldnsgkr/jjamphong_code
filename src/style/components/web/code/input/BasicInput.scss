@@ -1,0 +1,17 @@
+.basic-input {
+    width: 100%;
+    background-color: #F6F7FA;
+    border: 1px solid #E5E9F5;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    input {
+        width: 100%;
+        font-size: 1.2rem;
+        background-color: #F6F7FA;
+        border: none;
+        outline: none;
+    }
+    &.active {
+        border: 1px solid #3498db;
+    }
+}
