@@ -1,18 +1,16 @@
 .basic-button {
-    float: left;
-    min-width: 150px;
-    max-width: 250px;
     display: block;
-    padding: 1em 2em;
+    padding: 1rem 2rem;
     border: 2px solid #3498db;
     background: none;
     color: inherit;
     position: relative;
     z-index: 1;
     backface-visibility: hidden;
+    cursor: pointer;
     &.button--wayra {
         overflow: hidden;
-        width: 245px;
+        width: 100%;
         transition: border-color 0.3s, color 0.3s;
         transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
         &::before {
@@ -31,10 +29,10 @@
       
         &:hover {
             color: #fff;
-            border-color: #3f51b5;
+            border-color: #37474f;
             &::before {
                 opacity: 1;
-                background-color: #3f51b5;
+                background-color: #37474f;
                 transform: rotate3d(0, 0, 1, 0deg);
             }
         }
@@ -42,7 +40,7 @@
         &.button--inverted {
             &:hover {
                 color: #FFFFFF;
-                border-color: #3498db;
+                border-color: #37474f;
                 &::before {
                     background-color: #37474f;
                 }
