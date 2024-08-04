@@ -4,34 +4,41 @@ import '@style/pages/web/code/codeMain.scss';
 const CodeMain = () => {
   const exampleCode = `
     import React from 'react';
-    import { Route, Routes } from 'react-router-dom';
-    import { routerList } from '@constants/router/codeRoutingPath';
     
-    const CodeHome = () => {
+    const Home = () => {
       return (
         <>
-          <Routes>
-            {Object.entries(routerList).map(([key, value]) => (
-              <Route
-                key={key}
-                path={value.path}
-                element={<value.component />}
-              />
-            ))}
-          </Routes>
+          <div className="home">Hello Home</div>
         </>
       );
     };
     
-    export default CodeHome;
+    export default Home;
   `;
   return (
     <main>
       <section className="code__introduce">
-        <CodeDisplay
-          code={exampleCode}
-          language="javascript"
-        />
+        <div className="codeCopy__wrap">
+          <div className="codeCopy__wrap--text">
+            <p>
+              You can find the code you want and copy it!
+            </p>
+          </div>
+          <CodeDisplay code={exampleCode} language="jsx" />
+        </div>
+        <div className="codeWrite__wrap">
+          <div className="codeWrite__wrap--text">
+            <p>
+              Enter the code you want to register and share
+              it with everyone!
+            </p>
+            <button className="move__to--write">
+              <span>Click!</span>
+              <span>Go to Write</span>
+            </button>
+          </div>
+          <div></div>
+        </div>
       </section>
     </main>
   );
