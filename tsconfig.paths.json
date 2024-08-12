@@ -11,7 +11,8 @@
       "@image/*": ["assets/image/*"],
       "@icon/*": ["assets/icon/*"],
       "@store/*": ["store/*"],
-      "@hooks/*": ["hooks/*"]
+      "@hooks/*": ["hooks/*"],
+      "@server/*": ["server/*"]
     }
   },
   "include": [

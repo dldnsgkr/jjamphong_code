@@ -18,5 +18,8 @@
     "jsx": "react-jsx",
     "types": ["node", "jest"]
   },
+  "ts-node": {
+    "esm": true                // ts-node의 ESM 모드 활성화
+  },
   "include": ["src"]
 }

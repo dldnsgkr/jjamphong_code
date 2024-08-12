@@ -70,7 +70,8 @@
           ["@image", "./src/image"],
           ["@icon", "./src/assets/icon"],
           ["@store", "./src/store"],
-          ["@hooks", "./src/hooks"]
+          ["@hooks", "./src/hooks"],
+          ["@server", "./src/server"]
         ],
         "extensions": [".ts", ".tsx", ".js", ".jsx", ".scss"]
       }
