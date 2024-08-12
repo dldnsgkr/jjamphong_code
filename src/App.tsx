@@ -9,7 +9,11 @@ function App() {
           <Route
             key={key}
             path={value.path}
-            element={<value.component />}
+            element={
+              value.component ? (
+                <value.component />
+              ) : undefined
+            }
           ></Route>
         ))}
       </Routes>
