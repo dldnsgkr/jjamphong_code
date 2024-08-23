@@ -2,7 +2,8 @@ import BasicButton from '@components/web/code/button/BasicButton';
 import BasicInput from '@components/web/code/input/BasicInput';
 import CodeEditor from '@components/web/code/input/CodeEditor';
 import DropdownInput from '@components/web/code/input/DropdownInput';
-import TextareaInput from '@components/web/code/input/TextareaInput';
+import CodePostEditorDeps from '@components/web/code/view/CodePostEditorDeps';
+// import TextareaInput from '@components/web/code/input/TextareaInput';
 import { codeLanguageDropdownList } from '@constants/list/codeLanguageDropdown';
 import '@style/pages/web/code/codePostEditorPage.scss';
 import { useEffect, useState } from 'react';
@@ -23,6 +24,18 @@ const CodePostEditorPage = () => {
 // the language of the code editor is fixed to 'text'.`
   );
 
+  // content data
+  // const [content, setContent] = useState<string>('');
+
+  const buttonList = [
+    {
+      text: 'POSTING',
+    },
+    {
+      text: '예시',
+    },
+  ];
+
   // change code data
   const handleCodeChange = (newCode: string) => {
     setCode(newCode);
@@ -37,6 +50,15 @@ const CodePostEditorPage = () => {
     {
       explainTextElement: <p className="writer">WRITER</p>,
       inputElement: <BasicInput placeholder={'Writer'} />,
+    },
+    {
+      explainTextElement: <p>CONTENT</p>,
+      inputElement: (
+        <CodePostEditorDeps
+        // content={content}
+        // setContent={setContent}
+        />
+      ),
     },
     {
       explainTextElement: (
@@ -61,14 +83,14 @@ const CodePostEditorPage = () => {
         />
       ),
     },
-    {
-      explainTextElement: (
-        <p className="explain">EXPLAIN OF THE CODE</p>
-      ),
-      inputElement: (
-        <TextareaInput placeholder={'Explain'} />
-      ),
-    },
+    // {
+    //   explainTextElement: (
+    //     <p className="explain">EXPLAIN OF THE CODE</p>
+    //   ),
+    //   inputElement: (
+    //     <TextareaInput placeholder={'Explain'} />
+    //   ),
+    // },
   ];
 
   // if dropdownValue is changing,
@@ -87,7 +109,12 @@ const CodePostEditorPage = () => {
             {value.inputElement}
           </div>
         ))}
-        <BasicButton text={'POSTING'} />
+        <div className="button-wrapper">
+          {buttonList.map((value, key) => (
+            <BasicButton key={key} text={value.text} />
+          ))}
+        </div>
+        <div>일어ㅏ누리ㅏㄴ알민런이ㅏ리</div>
       </section>
     </main>
   );
