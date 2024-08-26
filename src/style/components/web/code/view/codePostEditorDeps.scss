@@ -5,6 +5,21 @@
     border: 1px solid #e5e9f5;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+    .editor_btn {
+      border: none;
+      border-right: 1px gray solid;
+      background-color: #f6f7fa;
+      border-top-left-radius: 0.5rem;
+      height: 1.9rem;
+      width: 1.9rem;
+      padding: 0;
+      &:hover {
+        background-color: darkgray;
+      }
+      & .active {
+        background-color: darkgray;
+      }
+    }
   }
   .deps-contents {
     min-height: 20rem;
