@@ -71,9 +71,16 @@
           ["@icon", "./src/assets/icon"],
           ["@store", "./src/store"],
           ["@hooks", "./src/hooks"],
-          ["@server", "./src/server"]
+          ["@server", "./src/server"],
+          ["@utils", "./src/utils"]
         ],
-        "extensions": [".ts", ".tsx", ".js", ".jsx", ".scss"]
+        "extensions": [
+          ".ts",
+          ".tsx",
+          ".js",
+          ".jsx",
+          ".scss"
+        ]
       }
     }
   }

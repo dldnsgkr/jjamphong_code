@@ -1,0 +1,72 @@
+.button-nina-wrapper {
+  position: relative;
+  padding: 0 2rem;
+  background: #3498db;
+  color: #fff;
+  overflow: hidden;
+  border: 1px solid #3498db;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &--inverted {
+    background: #fff;
+    color: #7986cb;
+  }
+
+  > span {
+    display: inline-block;
+    padding: 1em 0;
+    opacity: 0;
+    color: #fff;
+    transform: translate3d(0, -10px, 0);
+    transition:
+      transform 0.3s,
+      opacity 0.3s;
+    transition-timing-function: cubic-bezier(
+      0.75,
+      0,
+      0.125,
+      1
+    );
+  }
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em 0;
+    transition:
+      transform 0.3s,
+      opacity 0.3s;
+    transition-timing-function: cubic-bezier(
+      0.75,
+      0,
+      0.125,
+      1
+    );
+  }
+
+  &:hover {
+    background-color: #3f51b5;
+
+    &::before {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+
+    > span {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+
+      // 각 span 요소에 대해 순차적으로 지연 추가
+      @for $i from 1 through 50 {
+        &:nth-child(#{$i}) {
+          transition-delay: (0.045s * $i);
+        }
+      }
+    }
+  }
+}

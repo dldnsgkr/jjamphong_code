@@ -1,0 +1,35 @@
+.modal-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .modal-title {
+    padding: 0.5rem 0 1rem 0;
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  .close-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+}
+
+.link-information-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1rem 0;
+  .checkbox-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.button-area {
+  padding-top: 1rem;
+}

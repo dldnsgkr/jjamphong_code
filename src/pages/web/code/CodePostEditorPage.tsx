@@ -2,7 +2,8 @@ import BasicButton from '@components/web/code/button/BasicButton';
 import BasicInput from '@components/web/code/input/BasicInput';
 import CodeEditor from '@components/web/code/input/CodeEditor';
 import DropdownInput from '@components/web/code/input/DropdownInput';
-import CodePostEditorDeps from '@components/web/code/view/CodePostEditorDeps';
+import DraftEditor from '@components/web/code/textEditor/SlateEditor';
+// import CodePostEditorDeps from '@components/web/code/view/CodePostEditorDeps';
 // import TextareaInput from '@components/web/code/input/TextareaInput';
 import { codeLanguageDropdownList } from '@constants/list/codeLanguageDropdown';
 import '@style/pages/web/code/codePostEditorPage.scss';
@@ -24,6 +25,11 @@ const CodePostEditorPage = () => {
 // the language of the code editor is fixed to 'text'.`
   );
 
+  const [titleData, setTitleData] = useState('');
+
+  const [writerData, setWriterData] = useState('');
+  console.log(writerData);
+  console.log(titleData);
   // content data
   // const [content, setContent] = useState<string>('');
 
@@ -45,18 +51,19 @@ const CodePostEditorPage = () => {
   const inputElementList = [
     {
       explainTextElement: <p className="title">TITLE</p>,
-      inputElement: <BasicInput placeholder={'Title'} />,
+      inputElement: (
+        <BasicInput
+          placeholder={'Title'}
+          setInputData={setTitleData}
+        />
+      ),
     },
     {
       explainTextElement: <p className="writer">WRITER</p>,
-      inputElement: <BasicInput placeholder={'Writer'} />,
-    },
-    {
-      explainTextElement: <p>CONTENT</p>,
       inputElement: (
-        <CodePostEditorDeps
-        // content={content}
-        // setContent={setContent}
+        <BasicInput
+          placeholder={'Writer'}
+          setInputData={setWriterData}
         />
       ),
     },
@@ -70,6 +77,16 @@ const CodePostEditorPage = () => {
           setDropdownValue={setDropdownValue}
           dropdownList={codeLanguageDropdownList}
         />
+      ),
+    },
+    {
+      explainTextElement: <p>CONTENT</p>,
+      inputElement: (
+        // <CodePostEditorDeps
+        // // content={content}
+        // // setContent={setContent}
+        // />
+        <DraftEditor />
       ),
     },
     {
@@ -114,7 +131,6 @@ const CodePostEditorPage = () => {
             <BasicButton key={key} text={value.text} />
           ))}
         </div>
-        <div>일어ㅏ누리ㅏㄴ알민런이ㅏ리</div>
       </section>
     </main>
   );

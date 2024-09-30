@@ -1,21 +1,40 @@
 @font-face {
-    font-family: 'MyFont';
-    src: url('../../assets/fonts/NotoSansKR-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'MyFont';
+  src: url('../../assets/fonts/NotoSansKR-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    margin: 0;
-    font-family: 'MyFont', sans-serif;
+  margin: 0;
+  font-family: 'MyFont', sans-serif;
 }
 
-div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
-    margin: 0;
-    padding: 0;
-    border: 0;
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }

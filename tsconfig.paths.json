@@ -12,10 +12,11 @@
       "@icon/*": ["assets/icon/*"],
       "@store/*": ["store/*"],
       "@hooks/*": ["hooks/*"],
-      "@server/*": ["server/*"]
-    }
+      "@server/*": ["server/*"],
+      "@utils/*": ["utils/*"]
+    },
+    "strictNullChecks": true,
+    "strict": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

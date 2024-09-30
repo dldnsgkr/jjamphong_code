@@ -1,8 +1,10 @@
 {
   "extends": "./tsconfig.paths.json",
   "compilerOptions": {
+    "plugins": [{ "transform": "typia/lib/transform" }],
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "downlevelIteration": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -16,10 +18,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["node", "jest"]
+    "types": ["node", "jest"],
+    "strictNullChecks": true
   },
   "ts-node": {
-    "esm": true                // ts-node의 ESM 모드 활성화
+    "esm": true // ts-node의 ESM 모드 활성화
   },
   "include": ["src"]
 }
